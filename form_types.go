@@ -1,4 +1,7 @@
-// Module was generated 2023-04-27 21:33:04 by brandonh on lpdev.
+package main
+
+import "encoding/xml"
+
 type Module struct {
 	XMLName    xml.Name `xml:"Module"`
 	Text       string   `xml:",chardata"`
@@ -58,7 +61,7 @@ type Module struct {
 			ScrollbarYPosition   string `xml:"ScrollbarYPosition,attr"`
 			ScrollbarCanvasName  string `xml:"ScrollbarCanvasName,attr"`
 			ScrollbarXPosition   string `xml:"ScrollbarXPosition,attr"`
-			DatabaseBlock        string `xml:"DatabaseBlock,attr"`
+			DatabaseBlock        bool   `xml:"DatabaseBlock,attr"`
 			SubclassObjectGroup  string `xml:"SubclassObjectGroup,attr"`
 			Item                 []struct {
 				Text                           string `xml:",chardata"`
@@ -124,7 +127,7 @@ type Module struct {
 				FontStyle                      string `xml:"FontStyle,attr"`
 				FontSpacing                    string `xml:"FontSpacing,attr"`
 				SubclassSubObject              string `xml:"SubclassSubObject,attr"`
-				Trigger                        struct {
+				Trigger                        []struct {
 					Text              string `xml:",chardata"`
 					Name              string `xml:"Name,attr"`
 					TriggerText       string `xml:"TriggerText,attr"`
@@ -370,4 +373,4 @@ type Module struct {
 			} `xml:"ObjectGroupChild"`
 		} `xml:"ObjectGroup"`
 	} `xml:"FormModule"`
-} 
+}
